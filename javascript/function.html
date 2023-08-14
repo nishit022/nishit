@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FUNCTION</title>
+</head>
+<body>
+<h1> Function </h1>
+<p id="demo"> </p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p  id="demo3"></p>
+<script type="text/javascript">
+	function myf(p1 ,p2 ){
+		return p1 * p2 ;
+	}
+	let result = myf(5 ,6);
+	document.getElementById("demo").innerHTML=result;
+	function calc(f){
+		return 5/9 *  (f-32);
+	}
+	let x = calc(90);
+	document.getElementById("demo1").innerHTML= x;
+	function c(far){
+		return 5/9 * (far-32);
+	}
+	let far= 200;
+	let y = "the temperature is " + c(far) + " celsius";
+	document.getElementById("demo2").innerHTML= y;
+	function car(){
+		let carname="volvo ";
+		let text1 = "Inside : " + typeof carname + " " + carname ;
+		document.getElementById("demo3").innerHTML= text1 ;
+
+
+	}
+	car();
+</script>
+</body>
+</html>

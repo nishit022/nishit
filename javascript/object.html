@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object</title>
+</head>
+<body>
+<h1> Object </h1>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script type="text/javascript">
+	// create obj
+	const car={ type:"volvo" , model: "500" , color : "black"};
+	// dispaly
+	document.getElementById("demo").innerHTML= "the car color is " + car.color;
+	document.getElementById("demo1").innerHTML=" the " + car["type"]+ " color is " + car.color;
+	
+	const person = {firstname:"nishit" , 
+	lastname:"goswami" , 
+	age:"20" , 
+	id:"2203" ,
+	fullname : function() {
+		return this.firstname + " "  + this.lastname ;
+		// body...
+	}
+};
+document.getElementById("demo2").innerHTML=" Full Name is " + person.fullname();
+</script>
+</body>
+</html>

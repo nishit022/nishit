@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DATA TYPE </title>
+</head>
+<body>
+<h1>String DATA type </h1>
+<p id="str"></p>
+<h1> Number DATA type  </h1>
+<p id="num"></p>
+<h1> Object Data Type </h1>
+<p id="obj"></p>
+<h1> Array Data type </h1>
+<p id="arr"></p>
+<script type="text/javascript">
+	let x = "nishit" ;
+	let y = 888 ;
+	let z = true ;
+	let a = false ;
+	const person = {fistename: "parth" , lastname : "goswami"} ;
+	const car = ["Lamborgini"," BMW"," Volvo"];
+	 document.getElementById("str").innerHTML= x ;
+	 document.getElementById("num").innerHTML= y ;
+	 // document.getElementById("boolean").innerHTML= z ;
+	 document.getElementById("obj").innerHTML= "the firstname is  " + person.lastname ;
+	document.getElementById("arr").innerHTML= "the car list  is  " + car ;
+
+
+</script>
+</body>
+</html>
