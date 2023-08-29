@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> calculator </title>
+    </head>
+    <body>
+        <!-- <input type="text" id="num1"> -->
+        <!-- <br>        <br> -->
+        <!-- <input type="text" id="num2"> -->
+        <script>
+            function add(a ,b){
+                return a + b ;
+            }
+            function substraction(a , b){
+                return a - b ;
+            }
+            function multiplication(a , b){
+                return a * b ;
+            }
+            function divide(a , b){
+                return a / b ;
+            }
+            let num1 =parseFloat(prompt ("enter the first number : "));
+            let num2 = parseFloat(prompt("enter the second number : "));
+            let operation =prompt(" enter the operation ( + , - , * , /) : ");
+
+            let result;
+            switch (operation){
+                case  "+" :
+                    result = add(num1,num2);
+                    break;
+                case "-" :
+                    result=substraction(num1,num2);
+                    break;
+                case "*" :
+                    result = multiplication(num1,num2);
+                    break;
+                case "/":
+                        result = divide(num1,num2);
+                        break;
+                default:
+                    result = "invalid operation";
+                }
+        alert("result:" +result);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operations with Form</title>
+</head>
+<body>
+    <h2>CRUD Operations with Form</h2>
+
+    <form id="userForm">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" required><br><br>
+        
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" required><br><br>
+        
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" required><br><br>
+        
+        <button type="button" id="create">Create</button>
+    </form>
+
+    <h2>User Data</h2>
+    <table id="userData">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Contact</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+        const userForm = document.getElementById("userForm");
+        const userData = document.getElementById("userData");
+        const createButton = document.getElementById("create");
+        let users = [];
+
+        createButton.addEventListener("click", () => {
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const email = document.getElementById("email").value;
+            const city = document.getElementById("city").value;
+            const contact = document.getElementById("contact").value;
+
+            const newUser = { firstname, lastname, email, city, contact };
+            users.push(newUser);
+            renderTable();
+            clearForm();
+        });
+
+        function renderTable() {
+            userData.innerHTML = `
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+                ${users.map((user, index) => `
+                    <tr>
+                        <td>${user.firstname}</td>
+                        <td>${user.lastname}</td>
+                        <td>${user.email}</td>
+                        <td>${user.city}</td>
+                        <td>${user.contact}</td>
+                        <td><button onclick="deleteUser(${index})">Delete</button></td>
+                    </tr>
+                `).join("")}
+            `;
+        }
+
+        function clearForm() {
+            userForm.reset();
+        }
+
+        function deleteUser(index) {
+            users.splice(index, 1);
+            renderTable();
+        }
+    </script>
+</body>
+</html>

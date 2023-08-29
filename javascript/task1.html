@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upper & lower case translate</title>
+    </head>
+    <body>
+        <h1> Upper & Lower case translate</h1>
+        <textarea id="text" rows="5" cols="50">
+            The oldest classical British and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized. Word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.[1] The Greek parágraphos evolved into the pilcrow (¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences.
+        </textarea>
+        <button onclick="up()">Upper case</button> <button onclick="lw()"> Lower case</button>
+        <p id="demo" rows="5" cols="50"></p>
+        <p id="demo2"></p>
+        <script>
+            function up()
+            {
+                const intext=document.getElementById("text").innerHTML;
+                const result=intext.toUpperCase();
+                document.getElementById("demo").textContent=result;
+            }
+            function lw()
+            {
+                const text1 =document.getElementById("text").innerHTML;
+                const re =text1.toLowerCase();
+                document.getElementById("demo2").textContent=re;
+            }
+        </script>
+    </body>
+</html>
