@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> If Else Statements </title>
+    </head>
+    <body>
+        <h2> If else Statements </h2>
+        <p id="demo"></p>
+
+        <script>
+            const time = new Date().getHours();
+            let grettings;
+            if ( time < 10){
+                    grettings = "Good Morning !!";                
+            }else if (time < 16){
+                grettings = "Good Afternoon !!";
+            }else if (time < 20){
+                grettings = "Good Evening !!";
+            }else {
+                grettings = "Good Night !!";
+            }
+        document.getElementById("demo").innerHTML = grettings ;
+        </script>
+        
+    </body>
+</html>

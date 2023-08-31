@@ -15,8 +15,11 @@
         <p id="demo3"></p>
         <h2>The NOT operator (!) returns true for false statements and false for true statements.</h2>
         <p id="demo4"></p>
-
-        <script>
+        <h2> Ternary Operator ( ? : ) </h2>
+        <input id="age" value="18" >
+        <button onclick="myfunc()"> Try It </button>
+        <p id="demo5"></p>
+  <script>
             let x = 5;
             document.getElementById("demo").innerHTML=(x ==="5");
              let y = 6 ;
@@ -36,6 +39,12 @@
             let e = 4 ;
             let f = 7 ;
             document.getElementById("demo4").innerHTML = !(e === f) + "<br>" + !(e  < f );
+            
+            function myfunc(){
+                let age = document.getElementById("age").value ;
+                let vate = ( age < 18 ) ? "Too Young ":"Old Enough";
+                document.getElementById("demo5").innerHTML= vate + " To Vote";
+            }
        </script>
     </body>
 </html>
