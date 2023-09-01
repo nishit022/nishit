@@ -1,0 +1,21 @@
+<html>
+    <head> <title> Find Odd & Even Number  </title>
+    </head>
+    <body>
+        <h2> Find Odd And Even Number </h2>
+        <input type="text" id="num">
+        <button onclick="check()"> Check </button>
+        <p id="demo"></p>
+        <script>
+            function check(){
+             let n = document.getElementById("num").value ;
+             if(n%2 == 0){
+                document.getElementById("demo").textContent= n + " is even  number. " ;
+             }
+             else {
+                document.getElementById("demo").textContent = n + " is odd number ." ;
+             }
+            }
+        </script>
+    </body>
+</html>

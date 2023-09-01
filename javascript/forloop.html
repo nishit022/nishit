@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            For Loop 
+        </title>
+    </head>
+    <body>
+        <h2 > For Loop </h2>
+        <p id="demo"></p>
+        <h2> For in loop </h2>
+        <p id="demo1"></p>
+        <Script>
+            const car = [ "Volvo" , "BMW" , "Fiat" , "Audi" , "Ford" , "Saab" ];
+            let text = "";
+            for ( let i = 0 ; i<car.length ;i++){
+                text += car[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML= text;
+            const person ={fname : "Nishit" , lname : "Goswami" , age : "20"  }
+            let txt = " ";
+            for (let x in person){
+                txt += person[x] + " ";
+            }
+            document.getElementById("demo1").innerHTML= txt;
+        </Script>
+    </body>
+</html>

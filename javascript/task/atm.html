@@ -1,0 +1,53 @@
+<html>
+    <head><title> ATM </title>
+    </head>
+    <body>
+<center>
+        <h2> Welcome To ATM  </h2>
+        <label >Enter PIN : </label>
+        <input type="password" id="pin">
+        <button onclick="checkpin()"> Enter </button>
+        <p id="wmsg"></p>
+        <div style="display: none;" id="withdrawalsection">
+            
+            <label> Enter Withdrawal Amount : </label>
+            <input type="number" id="amount" >
+            <button onclick="withdrawamount()" > Withdraw </button>
+        </div>        
+        <p id="msg"></p>
+    </center>
+ <script>
+            const cpin = "1234";
+            let Mbalance = "5000";
+
+            function checkpin(){
+                const epin = document.getElementById("pin").value ;
+                //const message = document.getElementById("wmsg");
+
+                if(epin === cpin){
+                    document.getElementById("wmsg").innerHTML="PIN Correct . You can now withdraw money .";
+                    document.getElementById("withdrawalsection").style.display = "block";
+                }
+                else{
+                    document.getElementById("wmsg").innerHTML=" Please Enter correct PIN .";
+                }
+            }
+            function withdrawamount(){
+                const wamount = document.getElementById("amount").value;
+               // const message = document.getElementById("msg");
+
+                if( wamount > 0 && wamount <=Mbalance){
+                    Mbalance -= wamount ;
+                    document.getElementById("msg").innerHTML= "Withdrawal sucessful . Remaining balance : " + Mbalance ;
+                }
+                else if(wamount<=0){
+                    document.getElementById("msg").innerHTML="Please enter a valid withdrawal amount . ";
+                }
+                else {
+                    document.getElementById("msg").innerHTML="Insufficient Balance for withdrawal.";
+                }
+
+            }
+        </script>
+    </body>
+</html>
